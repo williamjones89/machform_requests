@@ -82,13 +82,11 @@ function createRequest(e){
             url: Url,
             data: requestData,
             success: function(result){
-                    console.log('success');
             },
             error: function(result){
-                    console.log('fail');
             },
             complete: function(){
-            	document.getElementById("form_338655").submit();
+		    console.log('Request Submission Finished');
             }
     });
 };
