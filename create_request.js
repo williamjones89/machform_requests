@@ -139,7 +139,7 @@ function createRequest(e){
 		{
 			type: 'POST',
 			url: "/machform/view.php",
-			data: document.getElementById("form_416097").serialize(),
+			data: $('form').serialize(),
 			success: function(result){
 				console.log(result.text);
 			},
