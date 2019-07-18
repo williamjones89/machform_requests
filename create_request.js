@@ -1,24 +1,51 @@
 const Url='https://webhook.site/699a57c5-679e-42ba-a94d-ca0595ec55c6';
 
 $(document).ready(
-    function()
-    {
-        document.getElementById("form_416097").addEventListener("submit", createRequest);
-    }
+	function()
+	{
+		document.getElementById("form_416097").addEventListener("submit", createRequest);
+	}
 );
 
 function createRequest(e){
-	console.log("the form was submitted");
 	e.preventDefault();
+	
+	var student_role = document.getElementById("element_1").value;
 	var first_name = document.getElementById("element_2").value;
 	var last_name = document.getElementById("element_3").value;
-	var description = document.getElementById("element_8").value;
-	var student_role = document.getElementById("element_1").value;
 	var a_number = document.getElementById("element_4").value;
 	var phone_number = document.getElementById("element_5").value;
 	var alt_email = document.getElementById("element_6").value;
 	var last_login = document.getElementById("element_7").value;
-    var myJson = {
+	var description = document.getElementById("element_8").value;
+    
+	if (!student_role)
+	{
+		alert("Please enter Student Role");
+		return false;
+	}
+	if (!first_name)
+	{
+		alert("Please enter First Name");
+		return false;
+	}
+	if (!last_name)
+	{
+		alert("Please enter Last Name");
+		return false;
+	}
+	if (!a_number)
+	{
+		alert("Please enter A Number");
+		return false;
+	}
+	if (!phone_number)
+	{
+		alert("Please enter Phone Number");
+		return false;
+	}
+	
+	var myJson = {
         "request": {
                 "requester": {
                         "email_id": "",
@@ -75,18 +102,27 @@ function createRequest(e){
             }
         }
     }
+	
     var jsonString = JSON.stringify(myJson);
+	
     var requestData = 'input_data=' + encodeURIComponent(jsonString);
-    $.ajax({
-            type: 'POST',
-            url: Url,
-            data: requestData,
-            success: function(result){
-            },
-            error: function(result){
-            },
-            complete: function(){
-		    console.log('Request Submission Finished');
-            }
-    });
+    
+	console.log("Submitting Request");
+	
+	$.ajax(
+		{
+			type: 'POST',
+			url: Url,
+			data: requestData,
+			success: function(result){
+				console.log(result.text);
+			},
+			error: function(result){
+				console.log(result.text);
+			},
+			complete: function(){
+				console.log('Request Submission Finished');
+			}
+		}
+	);
 };
