@@ -1,4 +1,4 @@
-const Url='http://requestbin.fullcontact.com/xpfrukxp'
+const Url='http://requestbin.fullcontact.com/tue4petu';
 document.getElementById("form_414428").addEventListener("submit", createRequest);
 function createRequest(e){
 	console.log("the form was submitted");
