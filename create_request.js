@@ -18,32 +18,39 @@ function createRequest(e){
 	var alt_email = document.getElementById("element_6").value;
 	var last_login = document.getElementById("element_7").value;
 	var description = document.getElementById("element_8").value;
-    
+    	
+	var should_stop = false;
+	var response = "";
 	if (!student_role)
 	{
-		alert("Please enter Student Role");
+		response = "Studdent Role";
+		should_stop = true;
+	}
+	else if (!first_name)
+	{
+		response = "First Name";
+		should_stop = true;
+	}
+	else if (!last_name)
+	{
+		response = "Last Name";
+		should_stop = true;
+	}
+	else if (!a_number)
+	{
+		response = "A Number";
+		should_stop = true;
+	}
+	else if (!phone_number)
+	{
+		response = "Phone Number";
+		should_stop = true;
+	}
+	
+	if (should_stop)
+	{
+		alert("Please enter " + response);
 		$(this).find(':input[type=submit]').prop('disabled', false);
-		return false;
-	}
-	if (!first_name)
-	{
-		alert("Please enter First Name");
-		$(this).find(':input[type=submit]').prop('disabled', false);
-		return false;
-	}
-	if (!last_name)
-	{
-		alert("Please enter Last Name");
-		return false;
-	}
-	if (!a_number)
-	{
-		alert("Please enter A Number");
-		return false;
-	}
-	if (!phone_number)
-	{
-		alert("Please enter Phone Number");
 		return false;
 	}
 	
