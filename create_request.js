@@ -1,5 +1,12 @@
 const Url='http://requestbin.fullcontact.com/tue4petu';
-document.getElementById("form_416097").addEventListener("submit", createRequest);
+
+$(document).ready(
+    function()
+    {
+        document.getElementById("form_416097").addEventListener("submit", createRequest);
+    }
+);
+
 function createRequest(e){
 	console.log("the form was submitted");
 	e.preventDefault();
