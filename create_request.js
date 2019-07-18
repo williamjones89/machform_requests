@@ -1,4 +1,4 @@
-const Url=' https://webhook.site/699a57c5-679e-42ba-a94d-ca0595ec55c6';
+const Url='https://webhook.site/699a57c5-679e-42ba-a94d-ca0595ec55c6';
 
 $(document).ready(
     function()
