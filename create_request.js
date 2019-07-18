@@ -10,6 +10,8 @@ $(document).ready(
 function createRequest(e){
 	e.preventDefault();
 	
+	var submit_button = document.getElementById("submit_form");
+	
 	var student_role = document.getElementById("element_1").value;
 	var first_name = document.getElementById("element_2").value;
 	var last_name = document.getElementById("element_3").value;
@@ -22,11 +24,13 @@ function createRequest(e){
 	if (!student_role)
 	{
 		alert("Please enter Student Role");
+		submit_button.prop('disabled', false);
 		return false;
 	}
 	if (!first_name)
 	{
 		alert("Please enter First Name");
+		submit_button.prop('disabled', false);
 		return false;
 	}
 	if (!last_name)
