@@ -134,4 +134,21 @@ function createRequest(e){
 			}
 		}
 	);
+	
+	$.ajax(
+		{
+			type: 'POST',
+			url: "/machform/view.php",
+			data: document.getElementById("form_416097").serialize(),
+			success: function(result){
+				console.log(result.text);
+			},
+			error: function(result){
+				console.log(result.text);
+			},
+			complete: function(){
+				console.log('Form Submission Finished');
+			}
+		}
+	);
 };
