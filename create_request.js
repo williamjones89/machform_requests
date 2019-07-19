@@ -39,22 +39,22 @@ function createRequest(e){
 	}
 	else if (!first_name)
 	{
-		response = "First Name";
+		response = "your First Name";
 		should_stop = true;
 	}
 	else if (!last_name)
 	{
-		response = "Last Name";
+		response = "your Last Name";
 		should_stop = true;
 	}
 	else if (!a_number || !a_number.match(/^a[0-9]{8}$/i))
 	{
-		response = "Valid A Number";
+		response = "a valid A-Number (Ex: A00123456)";
 		should_stop = true;
 	}
 	else if (!phone_number || !phone_number.match(/^([0-9]{3})-([0-9]{3})-([0-9]{4})$/))
 	{
-		response = "Phone Number";
+		response = "a Phone Number (Ex: 123-456-7890)";
 		should_stop = true;
 	}
 	else if (alt_email)
@@ -62,7 +62,7 @@ function createRequest(e){
 		var email_lowered = alt_email.toLowerCase();
 		if ( email_lowered.includes("@sunyorange.edu"))
 		{
-			response = "Valid Non-SunyOrange email";
+			response = "a valid Non-SunyOrange email";
 			should_stop = true;
 		}
 	}
