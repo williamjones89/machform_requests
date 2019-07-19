@@ -57,10 +57,15 @@ function createRequest(e){
 		response = "Phone Number";
 		should_stop = true;
 	}
-	else if (alt_email && alt_email.toLowerCase().includes("sunyorange.edu"))
+	else if (alt_email)
 	{
-		response = "Valid Non-SunyOrange email";
-		should_skip = true;
+		var email_lowered = alt_email.toLowerCase();
+		console.log(email_lowered);
+		if ( email_lowered.includes("sunyorange.edu"))
+		{
+			response = "Valid Non-SunyOrange email";
+			should_skip = true;
+		}
 	}
 	
 	/*
