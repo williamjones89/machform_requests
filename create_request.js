@@ -19,7 +19,7 @@ function createRequest(e){
 	var student_role = $('#element_1 :selected').text();;
 	console.log(student_role);
 	
-	var first_name = $("element_2").val();
+	var first_name = $("element_2").text();
 	console.log(first_name);
 	
 	var last_name = document.getElementById("element_3").value;
