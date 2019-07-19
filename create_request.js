@@ -16,13 +16,18 @@ function createRequest(e){
 	e.preventDefault();
 	
 	// Gather form entries as variables.
-	var student_role = document.getElementById("element_1").value;
+	var sr_drop_down = document.getElementById("element_1");
+	var student_role = sr_drop_down.options[sr_drop_down.selectedIndex].value
+	
 	var first_name = document.getElementById("element_2").value;
 	var last_name = document.getElementById("element_3").value;
 	var a_number = document.getElementById("element_4").value;
 	var phone_number = document.getElementById("element_5").value;
 	var alt_email = document.getElementById("element_6").value;
-	var last_login = document.getElementById("element_7").value;
+	
+	var ll_drop_down = document.getElementById("element_7");
+	var last_login = ll_drop_down.options[ll_drop_down.selectedIndex].value
+	
 	var description = document.getElementById("element_8").value;
     
 	// Create variable should_stop and set it to false.
