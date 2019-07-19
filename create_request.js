@@ -47,7 +47,7 @@ function createRequest(e){
 		response = "Last Name";
 		should_stop = true;
 	}
-	else if (!a_number || !a_number.mactch(/(A\a)?([0-9]{8})/) || a_number.length != 9)
+	else if (!a_number || !a_number.match(/(A\a)?([0-9]{8})/) || a_number.length != 9)
 	{
 		response = "Valid A Number";
 		should_stop = true;
@@ -60,7 +60,6 @@ function createRequest(e){
 	else if (alt_email)
 	{
 		var email_lowered = alt_email.toLowerCase();
-		console.log(email_lowered);
 		if ( email_lowered.includes("@sunyorange.edu"))
 		{
 			response = "Valid Non-SunyOrange email";
