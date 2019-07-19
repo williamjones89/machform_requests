@@ -16,8 +16,7 @@ function createRequest(e){
 	e.preventDefault();
 	
 	// Gather form entries as variables.
-	var sr_drop_down = document.getElementById("element_1");
-	var student_role = sr_drop_down.options[sr_drop_down.selectedIndex].value
+	var student_role = $('element_1').val();
 	
 	var first_name = document.getElementById("element_2").value;
 	var last_name = document.getElementById("element_3").value;
@@ -26,7 +25,7 @@ function createRequest(e){
 	var alt_email = document.getElementById("element_6").value;
 	
 	var ll_drop_down = document.getElementById("element_7");
-	var last_login = ll_drop_down.options[ll_drop_down.selectedIndex].value
+	var last_login = ll_drop_down.options[ll_drop_down.selectedIndex].value;
 	
 	var description = document.getElementById("element_8").value;
     
