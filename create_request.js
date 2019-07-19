@@ -198,7 +198,7 @@ function createRequest(e){
 				div_element.style.textAlign = "center";
 				div_element.setAttribute('class', 'form_success');
 				div_element.appendChild(para);
-				$("#form_container").insertBefore(div_element, form_to_hide);
+				document.getElementById("form_container").insertBefore(div_element, form_to_hide);
 			}
 		}
 	);
