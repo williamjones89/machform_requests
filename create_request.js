@@ -1,5 +1,7 @@
+// API URL.
 const Url='https://webhook.site/699a57c5-679e-42ba-a94d-ca0595ec55c6';
 
+// Once page has loaded, add an event when the form is submitted.
 $(document).ready(
 	function()
 	{
@@ -7,9 +9,13 @@ $(document).ready(
 	}
 );
 
+// Function to run when form is submitted.
 function createRequest(e){
+	
+	// Prevent default submission of form.
 	e.preventDefault();
 	
+	// Gather form entries as variables.
 	var student_role = document.getElementById("element_1").value;
 	var first_name = document.getElementById("element_2").value;
 	var last_name = document.getElementById("element_3").value;
@@ -18,9 +24,14 @@ function createRequest(e){
 	var alt_email = document.getElementById("element_6").value;
 	var last_login = document.getElementById("element_7").value;
 	var description = document.getElementById("element_8").value;
-    	
+    
+	// Create variable should_stop and set it to false.
+	// Create variable repsonse and leave it blank.
 	var should_stop = false;
 	var response = "";
+	
+	// If any of the mandatory fields are empty, set should_skip to true
+	// and set response to the field label.
 	if (!student_role)
 	{
 		response = "Studdent Role";
@@ -47,6 +58,12 @@ function createRequest(e){
 		should_stop = true;
 	}
 	
+	/*
+	If should_skip is true:
+		* Alter user.
+		* Re-enable to submit button.
+		* return false so this function ends here.
+	*/
 	if (should_stop)
 	{
 		alert("Please enter " + response);
@@ -54,6 +71,7 @@ function createRequest(e){
 		return false;
 	}
 	
+	// Create JSON to send to API URL using variables we created.
 	var myJson = {
 		"request": {
 			"requester": {
@@ -112,12 +130,16 @@ function createRequest(e){
 		}
 	}
 	
+	// Convert JSON to string
     var jsonString = JSON.stringify(myJson);
 	
+	// Add "input_data=" to the beginning of the jsonString.
+	// Encode non-letter characters (Ex: } becomes %7D)
     var requestData = 'input_data=' + encodeURIComponent(jsonString);
     
 	console.log("Submitting Request");
 	
+	// POST requestData to API URL
 	$.ajax(
 		{
 			type: 'POST',
@@ -135,6 +157,7 @@ function createRequest(e){
 		}
 	);
 	
+	// POST original form data
 	$.ajax(
 		{
 			type: 'POST',
@@ -149,13 +172,15 @@ function createRequest(e){
 			complete: function(){
 				console.log('Form Submission Finished');
 
+				// Hide Form
 				var form_to_hide = document.getElementById("form_416097")
 				if (form_to_hide.style.display === "none") {
 					form_to_hide.style.display = "block";
 				} else {
 					form_to_hide.style.display = "none";
 				}
-
+				
+				// Create a new DIV with text in it and insert it where the form was
 				var div_element = document.createElement('div');
 				var para = document.createElement("H2");
 				var t = document.createTextNode("Success! Your submission has been saved!");
