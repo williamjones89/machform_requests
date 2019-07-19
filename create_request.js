@@ -173,7 +173,7 @@ function createRequest(e){
 				console.log('Form Submission Finished');
 
 				// Hide Form
-				var form_to_hide = document.getElementById("form_416097")
+				var form_to_hide = document.forms[0];
 				if (form_to_hide.style.display === "none") {
 					form_to_hide.style.display = "block";
 				} else {
