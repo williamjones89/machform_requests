@@ -17,20 +17,14 @@ function createRequest(e){
 	
 	// Gather form entries as variables.
 	var student_role = $('#element_1 :selected').text();;
-	console.log(student_role);
-	
-	var first_name = $("element_2").val();
-	console.log(first_name);
-	
-	var last_name = document.getElementById("element_3").value;
-	var a_number = document.getElementById("element_4").value;
-	var phone_number = document.getElementById("element_5").value;
-	var alt_email = document.getElementById("element_6").value;
-	
-	var ll_drop_down = document.getElementById("element_7");
-	var last_login = ll_drop_down.options[ll_drop_down.selectedIndex].value;
-	
-	var description = document.getElementById("element_8").value;
+	var first_name = $('#element_2').val();
+	console.log(first_name);	
+	var last_name = $('#element_3').val();
+	var a_number = $('#element_4').val();
+	var phone_number = $('#element_5').val();
+	var alt_email = $('#element_6').val();
+	var last_login = $('#element_7 :selected').val();
+	var description = $('#element_8').val();
     
 	// Create variable should_stop and set it to false.
 	// Create variable repsonse and leave it blank.
@@ -204,7 +198,7 @@ function createRequest(e){
 				div_element.style.textAlign = "center";
 				div_element.setAttribute('class', 'form_success');
 				div_element.appendChild(para);
-				document.getElementById("form_container").insertBefore(div_element, form_to_hide);
+				$("#form_container").insertBefore(div_element, form_to_hide);
 			}
 		}
 	);
