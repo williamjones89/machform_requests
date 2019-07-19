@@ -63,30 +63,30 @@ function createRequest(e){
                         "id": "13203"
                 },
                 "subject": "Web Form Login Issue",
+				"request_type": {
+					"name": "Incident/Interruption of Service",
+					"id": "902"
+                },
                 "category": {
-                        "name": "STATUS CHECK",
-                        "id": "901"
-                },
+					"name": "INCIDENTS OR INTERRUPTION OF SERVICE",
+					"id": "602"
+				}
                 "subcategory": {
-                        "name": "Status Check",
-                        "id": "1503"
-                },
+					"name": "Login/Account Issue/Failure",
+					"id": "1220"
+				},
+				"item": {
+					"name": "Login/Password Error",
+					"id": "3399"
+				},
                 "group": {
                     "name": "Service Desk (ITSD)",
                     "id": "301"
-                },
-                "item": {
-                        "name": "Status Check",
-                        "id": "3608"
                 },
                 "description": `<p>${description}</p><br><br><p>${student_role}</p><br><p>${first_name}</p><br><p>${last_name}</p><br><p>${alt_email}</p><br><p>${a_number}</p><br><p>Last login: ${last_login}</p>`,
                 "mode": {
                         "name": "4-Web Case",
                         "id": "2"
-                },
-                "request_type": {
-                        "name": "Incident/Interruption of Service",
-                        "id": "902"
                 },
                 "impact": {
                         "name": "4-Minor/Localized",
