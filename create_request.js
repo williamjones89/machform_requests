@@ -158,7 +158,7 @@ function createRequest(e){
 
 				var div_element = document.createElement('div');
 				var para = document.createElement("P");
-				var t = document.createTextNode("This is a paragraph.");
+				var t = document.createTextNode("Success! Your submission has been saved!");
 				para.appendChild(t);
 				div_element.style.textAlign = "center";
 				div_element.appendChild(para);
