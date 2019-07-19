@@ -57,7 +57,7 @@ function createRequest(e){
 		response = "Phone Number";
 		should_stop = true;
 	}
-	else if (alt_email && alt_email.includes("world"))
+	else if (alt_email && alt_email.toLowerCase().includes("sunyorange.edu"))
 	{
 		response = "Valid Non-SunyOrange email";
 		should_skip = true;
