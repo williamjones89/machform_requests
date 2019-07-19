@@ -61,10 +61,10 @@ function createRequest(e){
 	{
 		var email_lowered = alt_email.toLowerCase();
 		console.log(email_lowered);
-		if ( email_lowered.includes("sunyorange.edu"))
+		if ( email_lowered.includes("@sunyorange.edu"))
 		{
 			response = "Valid Non-SunyOrange email";
-			should_skip = true;
+			should_stop = true;
 		}
 	}
 	
