@@ -157,10 +157,11 @@ function createRequest(e){
 				}
 
 				var div_element = document.createElement('div');
-				var para = document.createElement("P");
+				var para = document.createElement("H2");
 				var t = document.createTextNode("Success! Your submission has been saved!");
 				para.appendChild(t);
 				div_element.style.textAlign = "center";
+				div_element.setAttribute('class', 'form_success');
 				div_element.appendChild(para);
 				document.getElementById("form_container").insertBefore(div_element, form_to_hide);
 			}
