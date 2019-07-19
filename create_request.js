@@ -16,11 +16,12 @@ function createRequest(e){
 	e.preventDefault();
 	
 	// Gather form entries as variables.
-	var student_role = $('#element_1').val();
+	var student_role = $('#element_1 :selected').text();;
 	console.log(student_role);
 	
 	var first_name = $("element_2").val();
-	console.log(student_role);
+	console.log(first_name);
+	
 	var last_name = document.getElementById("element_3").value;
 	var a_number = document.getElementById("element_4").value;
 	var phone_number = document.getElementById("element_5").value;
