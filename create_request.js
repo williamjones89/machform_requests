@@ -157,7 +157,8 @@ function createRequest(e){
 				}
 
 				var para = document.createElement("P");
-				var t = document.createTextNode("This is a paragraph.");
+				var t = document.createTextNode("Success! Your submission has been saved!");
+				t.style.textAlign = "center";
 				para.appendChild(t);
 				document.getElementById("form_container").insertBefore(para, form_to_hide);
 			}
