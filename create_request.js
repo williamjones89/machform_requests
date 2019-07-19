@@ -55,62 +55,62 @@ function createRequest(e){
 	}
 	
 	var myJson = {
-        "request": {
-                "requester": {
-                        "email_id": "",
-                        "name": "Default User",
-                        "is_vipuser": "false",
-                        "id": "13203"
-                },
-                "subject": "Web Form Login Issue",
-				"request_type": {
-					"name": "Incident/Interruption of Service",
-					"id": "902"
-                },
-                "category": {
-					"name": "INCIDENTS OR INTERRUPTION OF SERVICE",
-					"id": "602"
-				}
-                "subcategory": {
-					"name": "Login/Account Issue/Failure",
-					"id": "1220"
-				},
-				"item": {
-					"name": "Login/Password Error",
-					"id": "3399"
-				},
-                "group": {
-                    "name": "Service Desk (ITSD)",
-                    "id": "301"
-                },
-                "description": `<p>${description}</p><br><br><p>${student_role}</p><br><p>${first_name}</p><br><p>${last_name}</p><br><p>${alt_email}</p><br><p>${a_number}</p><br><p>Last login: ${last_login}</p>`,
-                "mode": {
-                        "name": "4-Web Case",
-                        "id": "2"
-                },
-                "impact": {
-                        "name": "4-Minor/Localized",
-                        "id": "3"
-                },
-                "priority": {
-                        "color": "#939393",
-                        "name": "4-Low",
-                        "id": "1"
-                },
-                "urgency": {
-                        "name": "4-Low",
-                        "id": "4"
-                },
-                "udf_fields": {
-                "udf_multiselect_3610": [
-                    "MySUNYOrange"
-                ],
-                "udf_sline_2705": "N/A",
-                "udf_sline_2703": "${phone_number}",
-                "udf_pick_2702": "OFF-Campus Site"
-            }
-        }
-    }
+		"request": {
+			"requester": {
+				"email_id": "",
+				"name": "Default User",
+				"is_vipuser": "false",
+				"id": "13203"
+			},
+			"subject": "Web Form Login Issue",
+			"request_type": {
+				"name": "Incident/Interruption of Service",
+				"id": "902"
+			},
+			"category": {
+				"name": "INCIDENTS OR INTERRUPTION OF SERVICE",
+				"id": "602"
+			},
+			"subcategory": {
+				"name": "Login/Account Issue/Failure",
+				"id": "1220"
+			},
+			"item": {
+				"name": "Login/Password Error",
+				"id": "3399"
+			},
+			"group": {
+				"name": "Service Desk (ITSD)",
+				"id": "301"
+			},
+			"description": `<p>${description}</p><br><br><p>${student_role}</p><br><p>${first_name}</p><br><p>${last_name}</p><br><p>${alt_email}</p><br><p>${a_number}</p><br><p>Last login: ${last_login}</p>`,
+			"mode": {
+				"name": "4-Web Case",
+				"id": "2"
+			},
+			"impact": {
+				"name": "4-Minor/Localized",
+				"id": "3"
+			},
+			"priority": {
+				"color": "#939393",
+				"name": "4-Low",
+				"id": "1"
+			},
+			"urgency": {
+				"name": "4-Low",
+				"id": "4"
+			},
+			"udf_fields": {
+				"udf_multiselect_3610": [
+					"MySUNYOrange"
+				],
+				"udf_sline_2705": "N/A",
+				"udf_sline_2703": "${phone_number}",
+				"udf_pick_2702": "OFF-Campus Site"
+			}
+		}
+	}
 	
     var jsonString = JSON.stringify(myJson);
 	
@@ -124,10 +124,10 @@ function createRequest(e){
 			url: Url,
 			data: requestData,
 			success: function(result){
-				console.log(result.text);
+				console.log(result);
 			},
 			error: function(result){
-				console.log(result.text);
+				console.log(result);
 			},
 			complete: function(){
 				console.log('Request Submission Finished');
@@ -141,10 +141,10 @@ function createRequest(e){
 			url: "/machform/view.php",
 			data: $('form').serialize(),
 			success: function(result){
-				console.log(result.text);
+				console.log(result);
 			},
 			error: function(result){
-				console.log(result.text);
+				console.log(result);
 			},
 			complete: function(){
 				console.log('Form Submission Finished');
