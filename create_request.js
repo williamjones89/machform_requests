@@ -156,11 +156,13 @@ function createRequest(e){
 					form_to_hide.style.display = "none";
 				}
 
+				var div_element = document.createElement('div');
 				var para = document.createElement("P");
-				var t = document.createTextNode("Success! Your submission has been saved!");
-				t.style.textAlign = "center";
+				var t = document.createTextNode("This is a paragraph.");
 				para.appendChild(t);
-				document.getElementById("form_container").insertBefore(para, form_to_hide);
+				div_element.style.textAlign = "center";
+				div_element.appendChild(para);
+				document.getElementById("form_container").insertBefore(div_element, form_to_hide);
 			}
 		}
 	);
