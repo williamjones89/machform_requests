@@ -47,12 +47,12 @@ function createRequest(e){
 		response = "Last Name";
 		should_stop = true;
 	}
-	else if (!a_number || !a_number.match(/(A\a)?([0-9]{8})/) || a_number.length != 9)
+	else if (!a_number || !a_number.match(/^a[0-9]{8}$/i))
 	{
 		response = "Valid A Number";
 		should_stop = true;
 	}
-	else if (!phone_number || !phone_number.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/))
+	else if (!phone_number || !phone_number.match(/^([0-9]{3})-([0-9]{3})-([0-9]{4})$/))
 	{
 		response = "Phone Number";
 		should_stop = true;
