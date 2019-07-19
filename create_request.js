@@ -148,6 +148,18 @@ function createRequest(e){
 			},
 			complete: function(){
 				console.log('Form Submission Finished');
+
+				var form_to_hide = document.getElementById("form_416097")
+				if (form_to_hide.style.display === "none") {
+					form_to_hide.style.display = "block";
+				} else {
+					form_to_hide.style.display = "none";
+				}
+
+				var para = document.createElement("P");
+				var t = document.createTextNode("This is a paragraph.");
+				para.appendChild(t);
+				document.getElementById("form_container").insertBefore(para, form_to_hide);
 			}
 		}
 	);
