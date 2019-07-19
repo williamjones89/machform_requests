@@ -52,10 +52,15 @@ function createRequest(e){
 		response = "A Number";
 		should_stop = true;
 	}
-	else if (!phone_number)
+	else if (!phone_number || !phone_number.match(/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;)))
 	{
 		response = "Phone Number";
 		should_stop = true;
+	}
+	else if (alt_email && alt_email.includes("world"))
+	{
+		response = "Valid Non-SunyOrange email";
+		should_skip = true;
 	}
 	
 	/*
