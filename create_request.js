@@ -17,8 +17,10 @@ function createRequest(e){
 	
 	// Gather form entries as variables.
 	var student_role = $('element_1').val();
+	console.log(student_role);
 	
-	var first_name = document.getElementById("element_2").value;
+	var first_name = $("element_2").value;
+	console.log(student_role);
 	var last_name = document.getElementById("element_3").value;
 	var a_number = document.getElementById("element_4").value;
 	var phone_number = document.getElementById("element_5").value;
