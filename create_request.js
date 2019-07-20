@@ -57,7 +57,7 @@ function createRequest(e){
 		response = "a Phone Number (Ex: XXX-XXX-XXXX)";
 		should_stop = true;
 	}
-	else if (!alt_email || alt_email.toLowerCase().includes("@sunyorange.edu"))
+	else if (!alt_email || !/^\S+@\S+\.\S{2,3}$/.test(alt_email) ||alt_email.toLowerCase().includes("@sunyorange.edu"))
 	{
 		response = "a valid Non-SunyOrange email";
 		should_stop = true;
