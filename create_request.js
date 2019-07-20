@@ -18,7 +18,6 @@ function createRequest(e){
 	// Gather form entries as variables.
 	var student_role = $('#element_1 :selected').text();;
 	var first_name = $('#element_2').val();
-	console.log(first_name);	
 	var last_name = $('#element_3').val();
 	var a_number = $('#element_4').val();
 	var phone_number = $('#element_5').val();
@@ -55,17 +54,18 @@ function createRequest(e){
 	}
 	else if (!phone_number || !phone_number.match(/^([0-9]{3})-([0-9]{3})-([0-9]{4})$/))
 	{
-		response = "a Phone Number (Ex: 123-456-7890)";
+		response = "a Phone Number (Ex: XXX-XXX-XXXX)";
 		should_stop = true;
 	}
-	else if (alt_email)
+	else if (!alt_email || alt_email.toLowerCase().includes("@sunyorange.edu"))
 	{
-		var email_lowered = alt_email.toLowerCase();
-		if ( email_lowered.includes("@sunyorange.edu"))
-		{
-			response = "a valid Non-SunyOrange email";
-			should_stop = true;
-		}
+		response = "a valid Non-SunyOrange email";
+		should_stop = true;
+	}
+	else if (!last_login)
+	{
+		response = "your Last Successful Login";
+		should_stop = true;
 	}
 	
 	/*
