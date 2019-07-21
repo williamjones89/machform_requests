@@ -4,7 +4,6 @@ header('Content-type: text/plain');
 
 $data = file_get_contents('php_input');
 
-echo data;
-
-return 200;
+echo 'success';
+exit;
 ?>
