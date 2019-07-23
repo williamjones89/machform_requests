@@ -8,16 +8,12 @@ $(document).ready(
         document.forms[0].addEventListener("submit", createRequest);
         document.forms[0].addEventListener("submit", function(event) {
             event.preventDefault();
-        }, false););
+        }, false);
     }
 );
 
 // Function to run when form is submitted.
 function createRequest(e){
-    
-    // Prevent default submission of form.
-    e.preventDefault(e);
-    
     // Gather form entries as variables.
     var student_role = $('#element_1 :selected').text();;
     var first_name = $('#element_2').val();
