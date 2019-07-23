@@ -6,6 +6,7 @@ $(document).ready(
     function()
     {
         document.forms[0].addEventListener("submit", createRequest);
+        document.forms[0].attr('action', '');
     }
 );
 
@@ -13,8 +14,7 @@ $(document).ready(
 function createRequest(e){
     
     // Prevent default submission of form.
-    //e.preventDefault(e);
-    e.defaultPrevented = true;
+    //e.preventDefault();
     
     // Gather form entries as variables.
     var student_role = $('#element_1 :selected').text();;
