@@ -1,5 +1,6 @@
 // API URL.
-const Url='/machform/so_php/service_desk_request.php';
+//const Url='/machform/so_php/service_desk_request.php';
+const Url='https://servicedesk.sunyorange.edu:443?TECHNICIAN_KEY=280FFF4B-0F9E-4519-92A0-BB11F228B3C'
 
 // Once page has loaded, add an event when the form is submitted.
 $(document).ready(
