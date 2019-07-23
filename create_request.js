@@ -155,7 +155,7 @@ function createRequest(){
             type: 'POST',
             url: Url,
             data: requestData,
-            contentType: "text/plain",
+            dataType: "text",
             success: function(result){
             },
             error: function(result){
