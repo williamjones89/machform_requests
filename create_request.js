@@ -13,7 +13,7 @@ $(document).ready(
 );
 
 // Function to run when form is submitted.
-function createRequest(e){
+function createRequest(){
     // Gather form entries as variables.
     var student_role = $('#element_1 :selected').text();;
     var first_name = $('#element_2').val();
