@@ -1,5 +1,5 @@
 // API URL.
-const Url='mf_request.php';
+const Url='/machform/so_php/mf_request.php';
 
 // Once page has loaded, add an event when the form is submitted.
 $(document).ready(
