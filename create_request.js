@@ -6,7 +6,7 @@ $(document).ready(
     function()
     {
         document.forms[0].addEventListener("submit", createRequest);
-        $('form').attr('action', '');
+        document.getElementById("form_416097").action = '';
     }
 );
 
