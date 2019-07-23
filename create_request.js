@@ -6,7 +6,7 @@ $(document).ready(
     function()
     {
         document.forms[0].addEventListener("submit", createRequest);
-        document.forms[0].attr('action', '');
+        $('form.appnitro.top_label').attr('action', '');
     }
 );
 
