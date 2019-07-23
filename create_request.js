@@ -14,7 +14,7 @@ $(document).ready(
 function createRequest(e){
     
     // Prevent default submission of form.
-    //e.preventDefault();
+    e.preventDefault(e);
     
     // Gather form entries as variables.
     var student_role = $('#element_1 :selected').text();;
