@@ -156,7 +156,7 @@ function createRequest(){
             url: Url,
             data: requestData,
             dataType: "text",
-            async: false
+            async: false,
             success: function(result){
             },
             error: function(result){
