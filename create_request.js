@@ -156,6 +156,7 @@ function createRequest(){
             url: Url,
             data: requestData,
             dataType: "text",
+            contentType: "text",
             async: false,
             success: function(result){
             },
