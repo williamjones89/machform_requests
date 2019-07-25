@@ -6,8 +6,8 @@ create_request.js:
 	- Disable default POST action from MACHFORM form
 	- Validates information on form
 	- Organizes form data into request formatted in JSON
-	- Passed JSON data encoded for URL to service_desk_request.php
-	- Passed form data to default MACHFORM php file
+	- Passes JSON data encoded for URL to service_desk_request.php
+	- Passes form data to default MACHFORM php file
 
 service_desk_request.php:
 	- Stores API KEY and URL for ServiceDesk so that it is not shown in client-side scripts
