@@ -6,6 +6,7 @@ $(document).ready(
         document.forms[0].addEventListener("submit", function(event) {
             event.preventDefault();
         }, false);
+        console.log("opened");
     }
 );
 
