@@ -45,7 +45,7 @@ function createRequest(){
         }
     );
     
-    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2=${ele_2}&element_3=${ele_3}', '_blank');
+    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2='+ele_2+'&element_3='ele_3, '_blank');
     
      // Hide Form
     var form_to_hide = document.forms[0];
