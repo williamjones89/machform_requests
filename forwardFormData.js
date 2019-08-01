@@ -12,9 +12,9 @@ $(document).ready(
 // Function to run when form is submitted.
 function createRequest(){
     // Gather form entries as variables.
-    var first_name = $('#element_1').val();
-    var last_name = $('#element_2').val();
-    var a_number = $('#element_3').val();
+    var ele_1 = $('#element_1').val();
+    var ele_2 = $('#element_2').val();
+    var ele_3 = $('#element_3').val();
     
     // Create variable should_stop and set it to false.
     // Create variable repsonse and leave it blank.
@@ -44,7 +44,7 @@ function createRequest(){
         }
     );
     
-    window.open('https://www.sunyorange.edu/machform/view.php?id=418263', '_blank');
+    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1=${ele_1}&element_2=${ele_2}&element_3=${ele_3}', '_blank');
     
      // Hide Form
     var form_to_hide = document.forms[0];
