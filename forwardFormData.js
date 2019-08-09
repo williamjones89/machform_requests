@@ -14,7 +14,7 @@ $(document).ready(
 function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
-    var ele_2 = $('#element_2').checked;
+    var ele_2 = 2;
     
     $("element_2").each(function(i) {
        if (this.checked) {
