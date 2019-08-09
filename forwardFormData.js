@@ -15,6 +15,13 @@ function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
     var ele_2 = $('#element_2').checked;
+    
+    $("element_2").each(function(i) {
+       if (this.checked) {
+           alert("Checkbox at index " + i + " is checked.");
+           ele_2 = i;
+       }
+    });
     var ele_3 = $('#element_3').val();
     
     // Create variable should_stop and set it to false.
