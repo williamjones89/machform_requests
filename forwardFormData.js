@@ -14,12 +14,12 @@ $(document).ready(
 function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
-    var ele_2 = 2;
+    var ele_2 = 'First option';
     
     $("element_2").each(function(i) {
        if (this.checked) {
            alert("Checkbox at index " + i + " is checked.");
-           ele_2 = i;
+           ele_2 = this.val();
        }
     });
     var ele_3 = $('#element_3').val();
