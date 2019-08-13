@@ -7,26 +7,6 @@ $(document).ready(
             event.preventDefault();
         }, false);
         console.log("opened");
-        
-        var e21 = $('#element_2_1').cheked
-        var e22 = $('#element_2_2').cheked
-        var e23 = $('#element_2_3').cheked
-        var e211 = $('#element_2_1').value
-        var e222 = $('#element_2_2').value
-        var e233 = $('#element_2_3').value
-        var e2111 = $('#element_2_1').val()
-        var e2222 = $('#element_2_2').val()
-        var e2333 = $('#element_2_3').val()
-        
-        console.log("Checkbox 1 is: " + e21);
-        console.log("Checkbox 2 is: " + e22);
-        console.log("Checkbox 3 is: " + e23);
-        console.log("Checkbox 1 is: " + e211);
-        console.log("Checkbox 2 is: " + e222);
-        console.log("Checkbox 3 is: " + e233);
-        console.log("Checkbox 1 is: " + e2111);
-        console.log("Checkbox 2 is: " + e2222);
-        console.log("Checkbox 3 is: " + e2333);
     }
 );
 
@@ -34,27 +14,7 @@ $(document).ready(
 function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
-    var ele_2_1 = 0;
-    var ele_2_2 = 0;
-    var ele_2_3 = 0;
-    
-    if ($('#element_2_1').cheked == true) {
-        ele_2_1 = 1;
-    } 
-    if ($('#element_2_2').cheked == true) {
-        ele_2_2 = 1;
-    }
-    if ($('#element_2_3').cheked == true) {
-        ele_2_3 = 1;
-    }
-    
-    alert("Checkbox 1 is: " + ele_2_1 + "\n");
-    alert("Checkbox 2 is: " + ele_2_2 + "\n");
-    alert("Checkbox 3 is: " + ele_2_3 + "\n");
-
     var ele_3 = $('#element_3').val();
-    
-    alert($('form').serialize())
 
     // POST original form data
     $.ajax(
@@ -72,7 +32,21 @@ function createRequest(){
         }
     );
     
-    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2_1='+ele_2_1+'&element_2_2='+ele_2_2+'&element_2_3='+ele_2_3+'&element_3='+ele_3, '_blank');
+    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_3='+ele_3;
+    if ($('#element_2_1').cheked == true) {
+        info_link += 'element_2_1=1';
+    } 
+    if ($('#element_2_2').cheked == true) {
+        info_link += 'element_2_2=1';
+    }
+    if ($('#element_2_3').cheked == true) {
+        info_link += 'element_2_3=1';
+    }
+    
+    console.log($('form').serialize())
+    console.log(info_link)
+    
+    window.open(info_link, '_blank');
     
      // Hide Form
     var form_to_hide = document.forms[0];
