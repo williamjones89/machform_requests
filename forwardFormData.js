@@ -14,11 +14,13 @@ $(document).ready(
 function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
-    var ele_2_1 = $('#element_2_1').val();
-    var ele_2_2 = $('#element_2_2').val();
-    var ele_2_3 = $('#element_2_3').val();
+    var ele_2_1 = $('#element_2_1').checked;
+    var ele_2_2 = $('#element_2_2').checked;
+    var ele_2_3 = $('#element_2_3').checked;
     
-    alert("value is: " + ele_2_1);
+    alert("Checkbox 1 is: " + ele_2_1 + "\n");
+    alert("Checkbox 2 is: " + ele_2_2 + "\n");
+    alert("Checkbox 3 is: " + ele_2_3 + "\n");
 
     var ele_3 = $('#element_3').val();
 
