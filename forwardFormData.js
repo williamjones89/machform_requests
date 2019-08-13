@@ -40,7 +40,7 @@ function createRequest(){
     
     for (var obj_key in new_ele_obj) {
         console.log(obj_key + " " + new_ele_obj[obj_key])
-        data_to_pass.replace(obj_key, new_ele_obj[obj_key]);
+        data_to_pass = data_to_pass.replace(obj_key, new_ele_obj[obj_key]);
     }
     
     window.open(info_link + data_to_pass, '_blank');
