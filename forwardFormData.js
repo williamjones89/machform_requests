@@ -33,13 +33,13 @@ function createRequest(){
     );
     
     var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_3='+ele_3;
-    if ($('#element_2_1').cheked == true) {
+    if ($('#element_2_1').cheked) {
         info_link += 'element_2_1=1';
     } 
-    if ($('#element_2_2').cheked == true) {
+    if ($('#element_2_2').cheked) {
         info_link += 'element_2_2=1';
     }
-    if ($('#element_2_3').cheked == true) {
+    if ($('#element_2_3').cheked) {
         info_link += 'element_2_3=1';
     }
     
