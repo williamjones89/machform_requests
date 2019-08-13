@@ -27,8 +27,20 @@ function createRequest(){
         }
     );
     
+    var new_ele_obj = {
+        "element_1" : "element_1aa",
+        "element_2_1" : "element_2_1",
+        "element_2_2" : "element_2_2",
+        "element_2_3" : "element_2_3",
+        "element_3" : "element_3"
+    }
+    
     var info_link = 'https://www.sunyorange.edu/machform/view.php?id=421215&';
     var data_to_pass = $('form').serialize().split('&form_id')[0]
+    
+    for (obj_key in new_ele_obj) {
+        data_to_pass.replace(obj_key, new_ele_obj[obj_key]);
+    }
     
     window.open(info_link + data_to_pass, '_blank');
     
