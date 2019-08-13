@@ -32,7 +32,7 @@ function createRequest(){
         }
     );
     
-    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&;
+    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&';
     var data_to_pass = $('form').serialize().split('form_id')[0]
     
     
