@@ -14,27 +14,11 @@ $(document).ready(
 function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
-    var ele_2 = 'First option';
+    var ele_2_1 = $('#element_2_1').val();
     
-    $("element_2").each(function(i) {
-       if (this.checked) {
-           alert("Checkbox at index " + i + " is checked.");
-           ele_2 = this.val();
-       }
-    });
-    var ele_3 = $('#element_3').val();
-    
-    // Create variable should_stop and set it to false.
-    // Create variable repsonse and leave it blank.
-    var should_stop = false;
-    var response = "";
+    alert("value is: " + ele_2_1);
 
-    if (should_stop)
-    {
-        alert("Please enter " + response);
-        $(this).find(':input[type=submit]').prop('disabled', false);
-        return false;
-    }
+    var ele_3 = $('#element_3').val();
 
     // POST original form data
     $.ajax(
@@ -52,7 +36,7 @@ function createRequest(){
         }
     );
     
-    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2='+ele_2+'&element_3='+ele_3, '_blank');
+    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2_1='+ele_2_1+'&element_3='+ele_3, '_blank');
     
      // Hide Form
     var form_to_hide = document.forms[0];
