@@ -11,10 +11,6 @@ $(document).ready(
 
 // Function to run when form is submitted.
 function createRequest(){
-    // Gather form entries as variables.
-    var ele_1 = $('#element_1').val();
-    var ele_3 = $('#element_3').val();
-
     // POST original form data
     $.ajax(
         {
@@ -31,7 +27,7 @@ function createRequest(){
         }
     );
     
-    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&';
+    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=421215&';
     var data_to_pass = $('form').serialize().split('&form_id')[0]
     
     window.open(info_link + data_to_pass, '_blank');
