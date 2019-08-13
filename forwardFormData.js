@@ -34,7 +34,7 @@ function createRequest(){
 
     var ele_3 = $('#element_3').val();
     
-    alter($('form').serialize())
+    alert($('form').serialize())
 
     // POST original form data
     $.ajax(
