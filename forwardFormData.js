@@ -14,7 +14,13 @@ $(document).ready(
 function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
-    var ele_2_1 = $('#element_2_1').value;
+    var ele_2_1 = 0;
+    var ele_2_1 = 0;
+    var ele_2_1 = 0;
+    
+    if ($('#element_2_1').cheked) {
+        ele_2_1 = 1;
+    } 
     var ele_2_2 = $('#element_2_2').value;
     var ele_2_3 = $('#element_2_3').value;
     
