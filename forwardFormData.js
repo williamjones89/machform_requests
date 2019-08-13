@@ -7,6 +7,26 @@ $(document).ready(
             event.preventDefault();
         }, false);
         console.log("opened");
+        
+        var e21 = $('#element_2_1').cheked
+        var e22 = $('#element_2_2').cheked
+        var e23 = $('#element_2_3').cheked
+        var e211 = $('#element_2_1').value
+        var e222 = $('#element_2_2').value
+        var e233 = $('#element_2_3').value
+        var e2111 = $('#element_2_1').val()
+        var e2222 = $('#element_2_2').val()
+        var e2333 = $('#element_2_3').val()
+        
+        console.log("Checkbox 1 is: " + e21);
+        console.log("Checkbox 2 is: " + e22);
+        console.log("Checkbox 3 is: " + e23);
+        console.log("Checkbox 1 is: " + e211);
+        console.log("Checkbox 2 is: " + e222);
+        console.log("Checkbox 3 is: " + e233);
+        console.log("Checkbox 1 is: " + e2111);
+        console.log("Checkbox 2 is: " + e2222);
+        console.log("Checkbox 3 is: " + e2333);
     }
 );
 
