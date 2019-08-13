@@ -6,7 +6,6 @@ $(document).ready(
         document.forms[0].addEventListener("submit", function(event) {
             event.preventDefault();
         }, false);
-        console.log("opened");
     }
 );
 
@@ -33,12 +32,7 @@ function createRequest(){
     );
     
     var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&';
-    var data_to_pass = $('form').serialize().split('form_id')[0]
-    
-    
-    console.log($('form').serialize())
-    console.log(info_link)
-    console.log(data_to_pass)
+    var data_to_pass = $('form').serialize().split('&form_id')[0]
     
     window.open(info_link + data_to_pass, '_blank');
     
