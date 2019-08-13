@@ -15,14 +15,18 @@ function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
     var ele_2_1 = 0;
-    var ele_2_1 = 0;
-    var ele_2_1 = 0;
+    var ele_2_2 = 0;
+    var ele_2_3 = 0;
     
     if ($('#element_2_1').cheked) {
         ele_2_1 = 1;
     } 
-    var ele_2_2 = $('#element_2_2').value;
-    var ele_2_3 = $('#element_2_3').value;
+    if ($('#element_2_2').cheked) {
+        ele_2_2 = 1;
+    }
+    if ($('#element_2_3').cheked) {
+        ele_2_3 = 1;
+    }
     
     alert("Checkbox 1 is: " + ele_2_1 + "\n");
     alert("Checkbox 2 is: " + ele_2_2 + "\n");
