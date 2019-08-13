@@ -15,6 +15,8 @@ function createRequest(){
     // Gather form entries as variables.
     var ele_1 = $('#element_1').val();
     var ele_2_1 = $('#element_2_1').val();
+    var ele_2_2 = $('#element_2_2').val();
+    var ele_2_3 = $('#element_2_3').val();
     
     alert("value is: " + ele_2_1);
 
@@ -36,7 +38,7 @@ function createRequest(){
         }
     );
     
-    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2_1='+ele_2_1+'&element_3='+ele_3, '_blank');
+    window.open('https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_2_1='+ele_2_1+'&element_2_2='+ele_2_2+'&element_2_3='+ele_2_3+'&element_3='+ele_3, '_blank');
     
      // Hide Form
     var form_to_hide = document.forms[0];
