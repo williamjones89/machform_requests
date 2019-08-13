@@ -32,21 +32,15 @@ function createRequest(){
         }
     );
     
-    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&element_1='+ele_1+'&element_3='+ele_3;
-    if ($('#element_2_1').cheked) {
-        info_link += 'element_2_1=1';
-    } 
-    if ($('#element_2_2').cheked) {
-        info_link += 'element_2_2=1';
-    }
-    if ($('#element_2_3').cheked) {
-        info_link += 'element_2_3=1';
-    }
+    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=418263&;
+    var data_to_pass = $('form').serialize().split('form_id')[0]
+    
     
     console.log($('form').serialize())
     console.log(info_link)
+    console.log(data_to_pass)
     
-    window.open(info_link, '_blank');
+    window.open(info_link + data_to_pass, '_blank');
     
      // Hide Form
     var form_to_hide = document.forms[0];
