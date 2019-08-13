@@ -38,7 +38,8 @@ function createRequest(){
     var info_link = 'https://www.sunyorange.edu/machform/view.php?id=421215&';
     var data_to_pass = $('form').serialize().split('&form_id')[0]
     
-    for (obj_key in new_ele_obj) {
+    for (var obj_key in new_ele_obj) {
+        console.log(obj_key + " " + new_ele_obj[obj_key])
         data_to_pass.replace(obj_key, new_ele_obj[obj_key]);
     }
     
