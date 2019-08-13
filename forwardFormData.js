@@ -18,13 +18,13 @@ function createRequest(){
     var ele_2_2 = 0;
     var ele_2_3 = 0;
     
-    if ($('#element_2_1').cheked) {
+    if ($('#element_2_1').cheked == true) {
         ele_2_1 = 1;
     } 
-    if ($('#element_2_2').cheked) {
+    if ($('#element_2_2').cheked == true) {
         ele_2_2 = 1;
     }
-    if ($('#element_2_3').cheked) {
+    if ($('#element_2_3').cheked == true) {
         ele_2_3 = 1;
     }
     
@@ -33,6 +33,8 @@ function createRequest(){
     alert("Checkbox 3 is: " + ele_2_3 + "\n");
 
     var ele_3 = $('#element_3').val();
+    
+    alter($('form').serialize())
 
     // POST original form data
     $.ajax(
