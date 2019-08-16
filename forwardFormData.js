@@ -11,10 +11,6 @@ $(document).ready(
 
 // Function to run when form is submitted.
 function createRequest(){
-    
-    var htmlString = "<?php echo $htmlString; ?>";
-    alert(htmlString);
-    
     // POST original form data
     $.ajax(
         {
