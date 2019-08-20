@@ -7,7 +7,11 @@ $(document).ready(
         var prevFormID = urlParams.get('prev_form_id');
         var prevEntryID = urlParams.get('prev_entry_id');
         
-        if (!empty(prevFormID) && !empty(prevEntryID)){
+        console.log(formormID);
+        console.log(prevFormID);
+        console.log(prevEntryID);
+        
+        if (prevFormID != '' && prevEntryID != ''){
             // &prev_form_id=417527&prev_entry_id=4
             $.ajax(
             {
