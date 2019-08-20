@@ -20,6 +20,6 @@ $(document).ready(
             complete: function(result){
                 console.log(result.responseText.split("<pre>")[1].split("</pre>")[0]);
             }
-        }       
-    )
+        })
+    }
 );
