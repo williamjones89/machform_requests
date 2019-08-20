@@ -18,7 +18,7 @@ $(document).ready(
             error: function(result){
             },
             complete: function(result){
-                console.log(result.responseText.split("<pre>")[1].split("</pre>")[0]);
+                console.log(result.responseText);
             }
         })
     }
