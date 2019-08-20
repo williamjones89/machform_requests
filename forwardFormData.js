@@ -4,7 +4,9 @@ $(document).ready(
     {
         var urlParams = new URLSearchParams(window.location.search);
         var prevFormID = urlParams.get('prev_form_id');
-        var prevEntryID = urlParams.get('prev_entry_id')
+        var prevEntryID = urlParams.get('prev_entry_id');
+        
+        console.log("&prev_form_id=" + {prevFormID} + "&prev_entry_id=" + {prevEntryID})
         
         // &prev_form_id=417527&prev_entry_id=4
         $.ajax(
