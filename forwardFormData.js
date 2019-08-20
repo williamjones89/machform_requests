@@ -2,10 +2,26 @@
 $(document).ready(
     function()
     {
-        document.forms[0].addEventListener("submit", createRequest);
-        document.forms[0].addEventListener("submit", function(event) {
-            event.preventDefault();
-        }, false);
+        var urlParams = new URLSearchParams(window.location.search);
+        var prevFormID = urlParams.get('prev_form_id');
+        var prevEntryID = urlParams.get('prev_entry_id')
+        
+        // &prev_form_id=417527&prev_entry_id=4
+        $.ajax(
+        {
+            type: 'POST',
+            url: "/machform/so_php/get_form_values.php",
+            data: "&prev_form_id=" + {prevFormID} + "&prev_entry_id=" + {prevEntryID},
+            success: function(result){
+            },
+            error: function(result){
+            },
+            complete: function(result){
+                console.log('Form Submission Finished');
+                console.log(result.responseText);
+            }
+        }
+    );
     }
 );
 
