@@ -16,7 +16,7 @@ function createRequest(){
         {
             type: 'POST',
             url: "/machform/so_php/get_form_values.php",
-            data: $('form').serialize() + "prev_form_id=417527&prev_entry_id=4",
+            data: $('form').serialize() + "&prev_form_id=417527&prev_entry_id=4",
             success: function(result){
             },
             error: function(result){
