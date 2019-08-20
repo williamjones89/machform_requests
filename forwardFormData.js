@@ -23,7 +23,7 @@ function createRequest(){
             },
             complete: function(){
                 console.log('Form Submission Finished');
-                console.log(data);
+                console.log($('form').serialize());
             }
         }
     );
