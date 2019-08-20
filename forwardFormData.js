@@ -23,8 +23,7 @@ function createRequest(){
             },
             complete: function(result){
                 console.log('Form Submission Finished');
-                console.log($('form').serialize() + "&prev_form_id=417527&prev_entry_id=4");
-                console.log(result);
+                console.log(result.responseText);
             }
         }
     );
