@@ -23,7 +23,7 @@ function createRequest(){
             },
             complete: function(){
                 console.log('Form Submission Finished');
-                console.log($('form').serialize() + "prev_form_id=417527&prev_entry_id=4");
+                console.log($('form').serialize() + "&prev_form_id=417527&prev_entry_id=4");
             }
         }
     );
