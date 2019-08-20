@@ -3,10 +3,9 @@ $(document).ready(
     function()
     {
         var urlParams = new URLSearchParams(window.location.search);
+        var formormID = urlParams.get('id');
         var prevFormID = urlParams.get('prev_form_id');
         var prevEntryID = urlParams.get('prev_entry_id');
-        
-        console.log("&prev_form_id=" + prevFormID + "&prev_entry_id=" + prevEntryID)
         
         // &prev_form_id=417527&prev_entry_id=4
         $.ajax(
@@ -23,28 +22,13 @@ $(document).ready(
                 console.log(result.responseText);
             }
         }
+            
+            
     );
-    }
 );
 
 // Function to run when form is submitted.
 function createRequest(){
-    // POST original form data
-    $.ajax(
-        {
-            type: 'POST',
-            url: "/machform/so_php/get_form_values.php",
-            data: $('form').serialize() + "&prev_form_id=417527&prev_entry_id=4",
-            success: function(result){
-            },
-            error: function(result){
-            },
-            complete: function(result){
-                console.log('Form Submission Finished');
-                console.log(result.responseText);
-            }
-        }
-    );
     
     /* JSON of element IDs and their corresponding IDs on new form
      { 
@@ -59,9 +43,6 @@ function createRequest(){
         "element_3" : "element_3",
         "element_4" : "element_4"
     }
-    
-    var info_link = 'https://www.sunyorange.edu/machform/view.php?id=421215&';
-    var data_to_pass = $('form').serialize().split('&form_id')[0]
     
     for (var obj_key in new_ele_obj) {
         data_to_pass = data_to_pass.replace(obj_key, new_ele_obj[obj_key]);
