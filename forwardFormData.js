@@ -11,7 +11,7 @@ $(document).ready(
         console.log(prevFormID);
         console.log(prevEntryID);
         
-        if (prevFormID != '' && prevEntryID != ''){
+        if (prevFormID != null && prevEntryID != null){
             // &prev_form_id=417527&prev_entry_id=4
             $.ajax(
             {
