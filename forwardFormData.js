@@ -24,8 +24,9 @@ $(document).ready(
                     console.log(result.responseText);
                     
                     var jsonData = result.responseText;
+                    var obj = JSON.parse(jsonData);
                     
-                    console.log(jsonData[0]);
+                    console.log(obj);
                 }
             })
         }
