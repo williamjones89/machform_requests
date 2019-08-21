@@ -37,6 +37,14 @@ $(document).ready(
                     var obj = JSON.parse(jsonData);
                     
                     console.log(document.getElementById("element_1").type);
+                    console.log(document.getElementById("element_2_1").type);
+                    console.log(document.getElementById("element_2_2").type);
+                    console.log(document.getElementById("element_2_3").type);
+                    console.log(document.getElementById("element_3").type);
+                    console.log(document.getElementById("element_4_1").type);
+                    console.log(document.getElementById("element_4_2").type);
+                    console.log(document.getElementById("element_4_3").type);
+                    console.log(document.getElementById("element_5").type);
                     
                     document.getElementById("element_1").value = obj["element_1"]["default_value"];
                     document.getElementById("element_2_1").checked = obj["element_2_1"]["default_value"] > 0;
