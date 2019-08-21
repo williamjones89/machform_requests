@@ -22,6 +22,10 @@ $(document).ready(
                 },
                 complete: function(result){
                     console.log(result.responseText);
+                    
+                    var jsonData = result.responseText;
+                    
+                    console.log(jsonData[0]);
                 }
             })
         }
