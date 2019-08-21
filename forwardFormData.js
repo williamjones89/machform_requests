@@ -39,12 +39,12 @@ $(document).ready(
                     console.log(obj["element_1"]["default_value"]);
                     
                     document.getElementById("element_1").value = obj["element_1"]["default_value"];
-                    document.getElementById("element_2_1").value = obj["element_2_1"]["default_value"];
-                    document.getElementById("element_2_2").value = obj["element_2_2"]["default_value"];
-                    document.getElementById("element_2_3").value = obj["element_2_3"]["default_value"];
+                    document.getElementById("element_2_1").checked = obj["element_2_1"]["default_value"];
+                    document.getElementById("element_2_2").checked = obj["element_2_2"]["default_value"];
+                    document.getElementById("element_2_3").checked = obj["element_2_3"]["default_value"];
                     document.getElementById("element_3").value = obj["element_3"]["default_value"];
-                    document.getElementById("element_4").value = obj["element_4"]["default_value"];
-                    document.getElementById("element_5").value = obj["element_5"]["default_value"];
+                    document.getElementById("element_4_2").checked = obj["element_4"]["default_value"];
+                    document.getElementById("element_5").selectedIndex = obj["element_5"]["default_value"];
                 }
             })
         }
