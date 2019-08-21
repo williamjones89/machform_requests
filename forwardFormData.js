@@ -38,7 +38,7 @@ $(document).ready(
                     
                     for (i = 0; i < document.forms[0].elements.length; i++) {
                         var element = document.forms[0].elements[i];
-                        if (transferJson hasOwnProperty(element.id))
+                        if (transferJson.hasOwnProperty(element.id))
                         {
                             console.log(element.type);
                         }
