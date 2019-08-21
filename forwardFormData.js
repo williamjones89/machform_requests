@@ -21,8 +21,7 @@ $(document).ready(
                 error: function(result){
                 },
                 complete: function(result){
-                    var jsonData = json.parse(result.responseText);
-                    console.log(jsonData);
+                    console.log(result.responseText);
                 }
             })
         }
