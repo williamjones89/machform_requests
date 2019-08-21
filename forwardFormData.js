@@ -3,11 +3,9 @@ $(document).ready(
     function()
     {
         var urlParams = new URLSearchParams(window.location.search);
-        var formormID = urlParams.get('id');
         var prevFormID = urlParams.get('prev_form_id');
         var prevEntryID = urlParams.get('prev_entry_id');
         
-        console.log("form id: " + formormID);
         console.log("prev form id: " + prevFormID);
         console.log("prev entry id: " + prevEntryID);
         
@@ -23,7 +21,7 @@ $(document).ready(
                 error: function(result){
                 },
                 complete: function(result){
-                    console.log(result.responseText);
+                    console.log(result);
                 }
             })
         }
