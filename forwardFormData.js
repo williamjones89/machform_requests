@@ -1,12 +1,12 @@
 var transferJson = {
     "element_1" : "element_1",
-    "element_2_3" : "element_2_3"
-    "element_2_2" : "element_2_2"
-    "element_2_1" : "element_2_1"
-    "element_3" : "element_3"
-    "element_4" : "element_4"
+    "element_2_3" : "element_2_3",
+    "element_2_2" : "element_2_2",
+    "element_2_1" : "element_2_1",
+    "element_3" : "element_3",
+    "element_4" : "element_4",
     "element_5" : "element_5"
-}
+};
 
 // Once page has loaded, add an event when the form is submitted.
 $(document).ready(
