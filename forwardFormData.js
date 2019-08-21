@@ -21,7 +21,7 @@ $(document).ready(
                 error: function(result){
                 },
                 complete: function(result){
-                    console.log(result);
+                    console.log(result.json());
                 }
             })
         }
