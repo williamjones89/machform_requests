@@ -1,17 +1,17 @@
-var transferJson = {
-    "element_1" : "element_1",
-    "element_2_3" : "element_2_3",
-    "element_2_2" : "element_2_2",
-    "element_2_1" : "element_2_1",
-    "element_3" : "element_3",
-    "element_4" : "element_4",
-    "element_5" : "element_5"
-};
-
 // Once page has loaded, add an event when the form is submitted.
 $(document).ready(
     function()
     {
+        var transferJson = {
+            "element_1" : "element_1",
+            "element_2_3" : "element_2_3",
+            "element_2_2" : "element_2_2",
+            "element_2_1" : "element_2_1",
+            "element_3" : "element_3",
+            "element_4" : "element_4",
+            "element_5" : "element_5"
+        };
+        
         var urlParams = new URLSearchParams(window.location.search);
         var prevFormID = urlParams.get('prev_form_id');
         var prevEntryID = urlParams.get('prev_entry_id');
@@ -37,17 +37,15 @@ $(document).ready(
                     var obj = JSON.parse(jsonData);
                     
                     for (i = 0; i < document.forms[0].elements.length; i++) {
-                        console.log(document.forms[0].elements[i].type);
+                        var element = document.forms[0].elements[i];
+                        if (transferJson hasOwnProperty(element.id))
+                        {
+                            console.log(element.type);
+                        }
+                        if (element.type == "checkbox"){
+                            
+                        }
                     }
-                    console.log(document.getElementById("element_1").type);
-                    console.log(document.getElementById("element_2_1").type);
-                    console.log(document.getElementById("element_2_2").type);
-                    console.log(document.getElementById("element_2_3").type);
-                    console.log(document.getElementById("element_3").type);
-                    console.log(document.getElementById("element_4_1").type);
-                    console.log(document.getElementById("element_4_2").type);
-                    console.log(document.getElementById("element_4_3").type);
-                    console.log(document.getElementById("element_5").type);
                     
                     document.getElementById("element_1").value = obj["element_1"]["default_value"];
                     document.getElementById("element_2_1").checked = obj["element_2_1"]["default_value"] > 0;
