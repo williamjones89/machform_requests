@@ -36,7 +36,7 @@ $(document).ready(
                     var jsonData = result.responseText;
                     var obj = JSON.parse(jsonData);
                     
-                    console.log(obj["element_1"]["default_value"]);
+                    console.log(document.getElementById("element_1").nodeType);
                     
                     document.getElementById("element_1").value = obj["element_1"]["default_value"];
                     document.getElementById("element_2_1").checked = obj["element_2_1"]["default_value"] > 0;
