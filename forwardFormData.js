@@ -43,7 +43,9 @@ $(document).ready(
                     document.getElementById("element_2_2").checked = obj["element_2_2"]["default_value"] > 0;
                     document.getElementById("element_2_3").checked = obj["element_2_3"]["default_value"] > 0;
                     document.getElementById("element_3").value = obj["element_3"]["default_value"];
-                    document.getElementById("element_4_2").checked = obj["element_4"]["default_value"];
+                    document.getElementById("element_4_1").checked = obj["element_4"]["default_value"] == 1;
+                    document.getElementById("element_4_2").checked = obj["element_4"]["default_value"] == 2;
+                    document.getElementById("element_4_3").checked = obj["element_4"]["default_value"] == 3;
                     document.getElementById("element_5").selectedIndex = obj["element_5"]["default_value"];
                 }
             })
