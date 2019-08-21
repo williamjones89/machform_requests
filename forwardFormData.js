@@ -1,3 +1,13 @@
+var transferJson = {
+    "element_1" : "element_1",
+    "element_2_3" : "element_2_3"
+    "element_2_2" : "element_2_2"
+    "element_2_1" : "element_2_1"
+    "element_3" : "element_3"
+    "element_4" : "element_4"
+    "element_5" : "element_5"
+}
+
 // Once page has loaded, add an event when the form is submitted.
 $(document).ready(
     function()
@@ -25,7 +35,10 @@ $(document).ready(
                     
                     var jsonData = result.responseText;
                     var obj = JSON.parse(jsonData);
-                    console.log(obj["element_1"]["default_value"]);                    
+                    
+                    console.log(obj["element_1"]["default_value"]);
+                    
+                    document.getElementById("element_1").value = obj["element_1"]["default_value"];
                 }
             })
         }
