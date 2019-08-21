@@ -36,6 +36,9 @@ $(document).ready(
                     var jsonData = result.responseText;
                     var obj = JSON.parse(jsonData);
                     
+                    for (i = 0; i < document.forms[0].elements.length; i++) {
+                        console.log(document.forms[0].elements[i].type);
+                    }
                     console.log(document.getElementById("element_1").type);
                     console.log(document.getElementById("element_2_1").type);
                     console.log(document.getElementById("element_2_2").type);
