@@ -25,7 +25,7 @@ $(document).ready(
                     
                     var jsonData = result.responseText;
                     var obj = JSON.parse(jsonData);
-                    console.log(obj["element_1"]);                    
+                    console.log(obj["element_1"]["default_value"]);                    
                 }
             })
         }
