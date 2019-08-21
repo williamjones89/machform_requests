@@ -26,7 +26,7 @@ $(document).ready(
                     var jsonData = result.responseText;
                     var obj = JSON.parse(jsonData);
                     
-                    console.log(obj);
+                    console.log(obj.count);
                 }
             })
         }
