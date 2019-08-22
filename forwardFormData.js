@@ -2,6 +2,20 @@
 $(document).ready(
     function()
     {
+        //////////////////////////////////////////////////////////////////////////////////////
+        // JSON of values to fill
+        //-----------------------
+        // format:
+        // "element id of this form" : "element id of previous form"
+        //
+        // example:
+        // "element_1" : "element_5"
+        // This will fill element_1 of this form with the value of element_5 of prev_form_id
+        //
+        // notes:
+        // * Use a comma after each entry except the last entry
+        // * File upload and Signatures are not supported at this time
+        //////////////////////////////////////////////////////////////////////////////////////
         var transferJson = {
             "element_1" : "element_1",
             "element_2_3" : "element_2_3",
@@ -81,14 +95,11 @@ $(document).ready(
                         var element = document.forms[0].elements[i];
                         if (transferJson.hasOwnProperty(element.id)) {
                             console.log(element.id + ': ' +element.type);
-                            if (element.type == "text" || element.type == "textarea"){
+                            if (element.type == "text" || element.type == "textarea" || element.type == "select-one"){
                                 document.getElementById(element.id).value = obj[element.id]["default_value"];
                             }
                             else if (element.type == "checkbox"){
                                 document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
-                            }
-                            else if (element.type == "select-one") {
-                                document.getElementById(element.id).value = obj[element.id]["default_value"];
                             }
                             else if (element.type == "radio") {
                                 var splitName = element.id.split('_');
@@ -96,20 +107,12 @@ $(document).ready(
                                 var checkedElement = elementID + '_' + obj[elementID]["default_value"];
                                 document.getElementById(checkedElement).checked = true;
                             }
+                            else if (element.type == "hidden"){
+                                if (element.class == "")
+                                document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
+                            }
                         }
                     }
-                    
-                    /*
-                    document.getElementById("element_1").value = obj["element_1"]["default_value"];
-                    document.getElementById("element_2_1").checked = obj["element_2_1"]["default_value"] > 0;
-                    document.getElementById("element_2_2").checked = obj["element_2_2"]["default_value"] > 0;
-                    document.getElementById("element_2_3").checked = obj["element_2_3"]["default_value"] > 0;
-                    document.getElementById("element_3").value = obj["element_3"]["default_value"];
-                    document.getElementById("element_4_1").checked = obj["element_4"]["default_value"] == 1;
-                    document.getElementById("element_4_2").checked = obj["element_4"]["default_value"] == 2;
-                    document.getElementById("element_4_3").checked = obj["element_4"]["default_value"] == 3;
-                    document.getElementById("element_5").selectedIndex = obj["element_5"]["default_value"];
-                    */
                 }
             })
         }
