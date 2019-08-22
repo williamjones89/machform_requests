@@ -48,7 +48,9 @@ $(document).ready(
             "element_17_1" : "element_17_1",
             "element_17_2" : "element_17_2",
             "element_17_3" : "element_17_3",
-            "element_17_4" : "element_17_4"
+            "element_17_4" : "element_17_4",
+            "element_18" : "element_18",
+            "element_19" : "element_19"
         };
         
         var urlParams = new URLSearchParams(window.location.search);
