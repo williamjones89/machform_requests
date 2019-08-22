@@ -52,7 +52,7 @@ $(document).ready(
                             }
                             else if (element.type == "radio") {
                                 var splitName = element.id.split('_');
-                                var elementID = splitName[0].'_'.splitName[1];
+                                var elementID = splitName[0] + '_' + splitName[1];
                                 var checkedElement = elementID + obj[elementID]["default_value"];
                                 document.getElementById(checkedElement).checked = true;
                             }
