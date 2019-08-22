@@ -50,6 +50,12 @@ $(document).ready(
                             else if (element.type == "select-one") {
                                 document.getElementById(element.id).selectedIndex = obj[element.id]["default_value"];
                             }
+                            else if (element.type == "radio") {
+                                var splitName = element.id.spliy('_');
+                                var elementID = splitName[0].'_'.splitName[1];
+                                var checkedElement = elementID + obj[elementID]["default_value"];
+                                document.getElementById(checkedElement).checked = true;
+                            }
                         }
                     }
                     
