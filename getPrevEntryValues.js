@@ -62,20 +62,20 @@ $(document).ready(
                         if (transferJson.hasOwnProperty(element.id)) {
                             console.log(element.id + ': ' +element.type);
                             if (element.type == "text" || element.type == "textarea" || element.type == "select-one"){
-                                document.getElementById(element.id).value = obj[element.id]["default_value"];
+                                document.getElementById(element.id).value = obj[transferJson[element.id]]["default_value"];
                             }
                             else if (element.type == "checkbox"){
-                                document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
+                                document.getElementById(element.id).checked = obj[transferJson[element.id]]["default_value"] > 0;
                             }
                             else if (element.type == "radio") {
                                 var splitName = element.id.split('_');
                                 var elementID = splitName[0] + '_' + splitName[1];
-                                var checkedElement = elementID + '_' + obj[elementID]["default_value"];
+                                var checkedElement = elementID + '_' + obj[transferJson[element.id]]["default_value"];
                                 document.getElementById(checkedElement).checked = true;
                             }
                             else if (element.type == "hidden"){
                                 if (element.class == "")
-                                document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
+                                document.getElementById(element.id).checked = obj[transferJson[element.id]]["default_value"] > 0;
                             }
                         }
                     }
