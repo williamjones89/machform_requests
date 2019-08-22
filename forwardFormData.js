@@ -81,7 +81,10 @@ $(document).ready(
                         var element = document.forms[0].elements[i];
                         if (transferJson.hasOwnProperty(element.id)) {
                             console.log(element.id + ': ' +element.type);
-                            if (element.type == "checkbox"){
+                            if (element.type == "text" || element.type == "textarea"){
+                                document.getElementById(element.id).value = obj[element.id]["default_value"];
+                            }
+                            else if (element.type == "checkbox"){
                                 document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
                             }
                             else if (element.type == "select-one") {
@@ -95,9 +98,6 @@ $(document).ready(
                             }
                             else if (element.type == "file") {
                                 
-                            }
-                            else{
-                                document.getElementById(element.id).value = obj[element.id]["default_value"];
                             }
                         }
                     }
