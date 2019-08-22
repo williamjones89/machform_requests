@@ -93,6 +93,9 @@ $(document).ready(
                                 var checkedElement = elementID + '_' + obj[elementID]["default_value"];
                                 document.getElementById(checkedElement).checked = true;
                             }
+                            else if (element.type == "file") {
+                                
+                            }
                             else{
                                 document.getElementById(element.id).value = obj[element.id]["default_value"];
                             }
