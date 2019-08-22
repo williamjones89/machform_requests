@@ -88,7 +88,7 @@ $(document).ready(
                                 document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
                             }
                             else if (element.type == "select-one") {
-                                document.getElementById(element.id).selectedIndex = obj[element.id]["default_value"];
+                                document.getElementById(element.id).value = obj[element.id]["default_value"];
                             }
                             else if (element.type == "radio") {
                                 var splitName = element.id.split('_');
