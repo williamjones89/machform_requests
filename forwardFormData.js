@@ -74,7 +74,7 @@ $(document).ready(
                     for (i = 0; i < document.forms[0].elements.length; i++) {
                         var element = document.forms[0].elements[i];
                         if (transferJson.hasOwnProperty(element.id)) {
-                            console.log(element.type);
+                            console.log(element.id + ': ' +element.type);
                             if (element.type == "checkbox"){
                                 document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
                             }
