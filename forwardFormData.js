@@ -50,9 +50,6 @@ $(document).ready(
                             else if (element.type == "select-one") {
                                 document.getElementById(element.id).selectedIndex = obj[element.id]["default_value"];
                             }
-                            else {
-                                document.getElementById(element.id).value = obj[element.id]["default_value"];
-                            }
                         }
                     }
                     
