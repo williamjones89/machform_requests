@@ -92,7 +92,7 @@ $(document).ready(
                                 document.getElementById(checkedElement).checked = true;
                             }
                             else{
-                                document.getElementById(element.id).checked = obj[element.id]["default_value"];
+                                document.getElementById(element.id).value = obj[element.id]["default_value"];
                             }
                         }
                     }
