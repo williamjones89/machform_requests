@@ -70,12 +70,12 @@ $(document).ready(
                             else if (element.type == "radio") {
                                 var splitName = element.id.split('_');
                                 var elementID = splitName[0] + '_' + splitName[1];
-                                var checkedElement = elementID + '_' + obj[transferJson[element.id]]["default_value"];
+                                
+                                var prev_splitName = transferJson[element.id].split('_');
+                                var prev_elementID = prev_splitName[0] + '_' + prev_splitName[1];
+                                
+                                var checkedElement = elementID + '_' + obj[prev_elementID]["default_value"];
                                 document.getElementById(checkedElement).checked = true;
-                            }
-                            else if (element.type == "hidden"){
-                                if (element.class == "")
-                                document.getElementById(element.id).checked = obj[transferJson[element.id]]["default_value"] > 0;
                             }
                         }
                     }
