@@ -8,8 +8,12 @@ $(document).ready(
             "element_2_2" : "element_2_2",
             "element_2_1" : "element_2_1",
             "element_3" : "element_3",
-            "element_4" : "element_4",
-            "element_5" : "element_5"
+            "element_4_1" : "element_4_1",
+            "element_4_2" : "element_4_2",
+            "element_4_3" : "element_4_3",
+            "element_5" : "element_5",
+            "element_6_1" : "element_6_1",
+            "element_6_2" : "element_6_2",
         };
         
         var urlParams = new URLSearchParams(window.location.search);
@@ -38,15 +42,21 @@ $(document).ready(
                     
                     for (i = 0; i < document.forms[0].elements.length; i++) {
                         var element = document.forms[0].elements[i];
-                        if (transferJson.hasOwnProperty(element.id))
-                        {
+                        if (transferJson.hasOwnProperty(element.id)) {
                             console.log(element.type);
-                        }
-                        if (element.type == "checkbox"){
-                            
+                            if (element.type == "checkbox"){
+                                document.getElementById(element.id).checked = obj[element.id]["default_value"] > 0;
+                            }
+                            else if (element.type == "select-one") {
+                                document.getElementById(element.id).selectedIndex = obj[element.id]["default_value"];
+                            }
+                            else {
+                                document.getElementById(element.id).value = obj[element.id]["default_value"];
+                            }
                         }
                     }
                     
+                    /*
                     document.getElementById("element_1").value = obj["element_1"]["default_value"];
                     document.getElementById("element_2_1").checked = obj["element_2_1"]["default_value"] > 0;
                     document.getElementById("element_2_2").checked = obj["element_2_2"]["default_value"] > 0;
@@ -56,6 +66,7 @@ $(document).ready(
                     document.getElementById("element_4_2").checked = obj["element_4"]["default_value"] == 2;
                     document.getElementById("element_4_3").checked = obj["element_4"]["default_value"] == 3;
                     document.getElementById("element_5").selectedIndex = obj["element_5"]["default_value"];
+                    */
                 }
             })
         }
