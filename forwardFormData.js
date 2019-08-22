@@ -44,7 +44,11 @@ $(document).ready(
             "element_16_1" : "element_16_1",
             "element_16_2" : "element_16_2",
             "element_16_3" : "element_16_3",
-            "element_16_4" : "element_16_4"
+            "element_16_4" : "element_16_4",
+            "element_17_1" : "element_17_1",
+            "element_17_2" : "element_17_2",
+            "element_17_3" : "element_17_3",
+            "element_17_4" : "element_17_4"
         };
         
         var urlParams = new URLSearchParams(window.location.search);
@@ -86,6 +90,9 @@ $(document).ready(
                                 var elementID = splitName[0] + '_' + splitName[1];
                                 var checkedElement = elementID + '_' + obj[elementID]["default_value"];
                                 document.getElementById(checkedElement).checked = true;
+                            }
+                            else{
+                                document.getElementById(element.id).checked = obj[element.id]["default_value"];
                             }
                         }
                     }
