@@ -17,20 +17,18 @@ $(document).ready(
         // * File upload and Signatures are not supported at this time
         //////////////////////////////////////////////////////////////////////////////////////
         var transferJson = {
-            "element_1_1" : "element_6_1",
-            "element_1_2" : "element_6_2",
-            "element_2_1" : "element_10_1",
-            "element_2_2" : "element_10_2",
-            "element_2_3" : "element_10_3",
-            "element_2_4" : "element_10_4",
-            "element_2_5" : "element_10_5",
-            "element_2_6" : "element_10_6",
-            "element_3" : "element_1",
-            "element_4" : "element_13",
-            "element_5_1" : "element_7_1",
-            "element_5_2" : "element_7_2",
-            "element_5_3" : "element_7_3",
-            "element_6" : "element_3"
+            "element_1_1" : "element_1_1",
+            "element_1_2" : "element_1_2",
+            "element_2_1" : "element_2_1",
+            "element_2_2" : "element_2_2",
+            "element_2_3" : "element_2_3",
+            "element_2_4" : "element_2_4",
+            "element_2_5" : "element_2_5",
+            "element_2_6" : "element_2_6",
+            "element_3_1" : "element_3_1",
+            "element_3_2" : "element_3_2",
+            "element_3_3" : "element_3_3",
+            "element_4" : "element_4"
         };
         
         var urlParams = new URLSearchParams(window.location.search);
