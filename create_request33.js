@@ -9,7 +9,6 @@ $(document).ready(
         console.log("Submitted: " + urlParams.has('done'));
         if (urlParams.has('prev_entry'))
         {
-            console.log("Entry id: " + urlParams.get('prev_entry'));
             // POST original form data
             $.ajax(
             {
@@ -20,13 +19,8 @@ $(document).ready(
                 },
                 error: function(result){
                 },
-                complete: function(result){
-                    console.log(result.responseText);
-                    
-                    var jsonData = result.responseText;
-                    var obj = JSON.parse(jsonData);
-                    
-                     // Hide Form
+                complete: function(result){          
+                     // Hide form
                     var form_to_hide = document.forms[0];
                     if (form_to_hide.style.display === "none") {
                         form_to_hide.style.display = "block";
@@ -34,7 +28,12 @@ $(document).ready(
                     else {
                         form_to_hide.style.display = "none";
                     }
-                       
+                    
+                    // Get V=values of submitted form
+                    var jsonData = result.responseText;
+                    var obj = JSON.parse(jsonData);
+                    
+                    // Store values as variables
                     document.getElementById("element_1").value = obj["element_1"]["default_value"];
                     var student_role = $('#element_1 :selected').text();
                     var first_name = obj["element_2"]["default_value"];
