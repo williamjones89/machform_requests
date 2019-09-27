@@ -7,15 +7,15 @@ $(document).ready(
     {
         var urlParams = new URLSearchParams(window.location.search);
         console.log(urlParams.has('done'));
-        if (urlParams.has('prev_entry_id'))
+        if (urlParams.has('prev_entry'))
         {
-            console.log(urlParams.get('prev_entry_id'));
+            console.log(urlParams.get('prev_entry'));
             // POST original form data
             $.ajax(
             {
                 type: 'POST',
                 url: "/machform33/so_php/get_form_values.php",
-                data: "&prev_form_id=" + urlParams.get('id') + "&prev_entry_id=" + urlParams.get('prev_entry_id'),
+                data: "&prev_form_id=" + urlParams.get('id') + "&prev_entry_id=" + urlParams.get('prev_entry'),
                 success: function(result){
                 },
                 error: function(result){
