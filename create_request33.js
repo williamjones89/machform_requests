@@ -35,13 +35,13 @@ $(document).ready(
                         form_to_hide.style.display = "none";
                     }
                     
-                    var student_role = $('#element_1').options[obj["element_1"]["default_value"]].text();
+                    var student_role = document.getElementById("element_1").options[obj["element_1"]["default_value"]].text();
                     var first_name = obj["element_2"]["default_value"];
                     var last_name = obj["element_3"]["default_value"];
                     var a_number = obj["element_4"]["default_value"];
                     var phone_number = obj["element_9_1"]["default_value"] + "-" + obj["element_9_2"]["default_value"] + "-" + obj["element_9_3"]["default_value"];
                     var alt_email = obj["element_6"]["default_value"];
-                    var last_login = $('#element_7').options[obj["element_7"]["default_value"]].text();
+                    var last_login = document.getElementById("element_1").options[obj["element_1"]["default_value"]].text();
                     var description = obj["element_8"]["default_value"];
                     
                      // Create JSON to send to API URL using variables we created.
