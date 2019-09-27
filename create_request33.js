@@ -132,6 +132,9 @@ function createRequest(){
             success: function(result){
                 console.log(result);
                 
+                $("html").html(result);
+                
+                /*
                 // POST requestData to service_desk_request
                 $.ajax(
                     {
@@ -147,6 +150,7 @@ function createRequest(){
                         }
                     }
                 );
+                /*
                 
                 /*
                 // Hide Form
