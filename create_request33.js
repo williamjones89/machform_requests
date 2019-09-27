@@ -9,7 +9,7 @@ $(document).ready(
         console.log(urlParams.has('done'));
         if (urlParams.has('prev_entry'))
         {
-            console.log(urlParams.get('prev_entry'));
+            console.log(urlParams.get('id') + " : " + urlParams.get('prev_entry'));
             // POST original form data
             $.ajax(
             {
@@ -22,6 +22,11 @@ $(document).ready(
                 },
                 complete: function(result){
                     console.log(result.responseText);
+                    
+                    var jsonData = result.responseText;
+                    var obj = JSON.parse(jsonData);
+                    
+                    console.log(obj);
                 }
             })
         }
