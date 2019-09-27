@@ -24,6 +24,7 @@ function createRequest(){
     var last_login = $('#element_7 :selected').text();
     var description = $('#element_8').val();
     
+    /*
     // Create variable should_stop and set it to false.
     // Create variable repsonse and leave it blank.
     var should_stop = false;
@@ -66,19 +67,22 @@ function createRequest(){
         response = "your Last Successful Login";
         should_stop = true;
     }
+    */
     
     /*
     If should_skip is true:
         * Alter user.
         * Re-enable to submit button.
-        * return false so this function ends here.
+        * return false so this function ends here
     */
+    /*
     if (should_stop)
     {
         alert("Please enter " + response);
         $(this).find(':input[type=submit]').prop('disabled', false);
         return false;
     }
+    */
     
     // Create JSON to send to API URL using variables we created.
     var myJson = {
@@ -147,22 +151,6 @@ function createRequest(){
     var requestData = 'input_data=' + encodeURIComponent(jsonString);
     
     console.log("Submitting Request");
-    
-    // POST requestData to service_desk_request
-    $.ajax(
-        {
-            type: 'POST',
-            url: Url,
-            data: requestData,
-            success: function(result){
-            },
-            error: function(result){
-            },
-            complete: function(){
-                console.log('Request Submission Finished');
-            }
-        }
-    );
 
     // POST original form data
     $.ajax(
@@ -171,6 +159,40 @@ function createRequest(){
             url: "/machform33/view.php",
             data: $('form').serialize(),
             success: function(result){
+                // POST requestData to service_desk_request
+                $.ajax(
+                    {
+                        type: 'POST',
+                        url: Url,
+                        data: requestData,
+                        success: function(result){
+                        },
+                        error: function(result){
+                        },
+                        complete: function(){
+                            console.log('Request Submission Finished');
+                        }
+                    }
+                );
+                
+                // Hide Form
+                var form_to_hide = document.forms[0];
+                if (form_to_hide.style.display === "none") {
+                    form_to_hide.style.display = "block";
+                } 
+                else {
+                    form_to_hide.style.display = "none";
+                }
+
+                // Create a new DIV with text in it and insert it where the form was
+                var div_element = document.createElement('div');
+                var para = document.createElement("H2");
+                var t = document.createTextNode("Success! Your submission has been saved!");
+                para.appendChild(t);
+                div_element.style.textAlign = "center";
+                div_element.setAttribute('class', 'form_success');
+                div_element.appendChild(para);
+                document.getElementById("form_container").insertBefore(div_element, form_to_hide);
             },
             error: function(result){
             },
@@ -179,23 +201,4 @@ function createRequest(){
             }
         }
     );
-    
-     // Hide Form
-    var form_to_hide = document.forms[0];
-    if (form_to_hide.style.display === "none") {
-        form_to_hide.style.display = "block";
-    } 
-    else {
-        form_to_hide.style.display = "none";
-    }
-
-    // Create a new DIV with text in it and insert it where the form was
-    var div_element = document.createElement('div');
-    var para = document.createElement("H2");
-    var t = document.createTextNode("Success! Your submission has been saved!");
-    para.appendChild(t);
-    div_element.style.textAlign = "center";
-    div_element.setAttribute('class', 'form_success');
-    div_element.appendChild(para);
-    document.getElementById("form_container").insertBefore(div_element, form_to_hide);
 };
