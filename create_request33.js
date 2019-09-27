@@ -31,7 +31,7 @@ function createRequest(){
     
     // If any of the mandatory fields are empty, set should_skip to true
     // and set response to the field label.
-    else if (!a_number || !a_number.match(/^a[0-9]{8}$/i))
+    if (!a_number || !a_number.match(/^a[0-9]{8}$/i))
     {
         response = "a valid A-Number (Ex: A00123456)";
         should_stop = true;
