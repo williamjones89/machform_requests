@@ -159,6 +159,8 @@ function createRequest(){
             url: "/machform33/view.php",
             data: $('form').serialize(),
             success: function(result){
+                console.log(result);
+                
                 // POST requestData to service_desk_request
                 $.ajax(
                     {
