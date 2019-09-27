@@ -19,12 +19,11 @@ function createRequest(){
     var first_name = $('#element_2').val();
     var last_name = $('#element_3').val();
     var a_number = $('#element_4').val();
-    var phone_number = $('#element_5').val();
+    var phone_number = $('#element_9_1').val() + "-" + $('#element_9_2').val() + "-" + $('#element_9_3').val();
     var alt_email = $('#element_6').val();
     var last_login = $('#element_7 :selected').text();
     var description = $('#element_8').val();
     
-    /*
     // Create variable should_stop and set it to false.
     // Create variable repsonse and leave it blank.
     var should_stop = false;
@@ -32,29 +31,9 @@ function createRequest(){
     
     // If any of the mandatory fields are empty, set should_skip to true
     // and set response to the field label.
-    if (!student_role)
-    {
-        response = "Studdent Role";
-        should_stop = true;
-    }
-    else if (!first_name)
-    {
-        response = "your First Name";
-        should_stop = true;
-    }
-    else if (!last_name)
-    {
-        response = "your Last Name";
-        should_stop = true;
-    }
     else if (!a_number || !a_number.match(/^a[0-9]{8}$/i))
     {
         response = "a valid A-Number (Ex: A00123456)";
-        should_stop = true;
-    }
-    else if (!phone_number || !phone_number.match(/^([0-9]{3})-([0-9]{3})-([0-9]{4})$/))
-    {
-        response = "a Phone Number (Ex: XXX-XXX-XXXX)";
         should_stop = true;
     }
     else if (!alt_email || !/^\S+@\S+\.\S{2,3}$/.test(alt_email) ||alt_email.toLowerCase().includes("@sunyorange.edu"))
@@ -62,12 +41,6 @@ function createRequest(){
         response = "a valid Non-SunyOrange email";
         should_stop = true;
     }
-    else if (!last_login)
-    {
-        response = "your Last Successful Login";
-        should_stop = true;
-    }
-    */
     
     /*
     If should_skip is true:
@@ -75,14 +48,12 @@ function createRequest(){
         * Re-enable to submit button.
         * return false so this function ends here
     */
-    /*
     if (should_stop)
     {
         alert("Please enter " + response);
         $(this).find(':input[type=submit]').prop('disabled', false);
         return false;
     }
-    */
     
     // Create JSON to send to API URL using variables we created.
     var myJson = {
@@ -177,6 +148,7 @@ function createRequest(){
                     }
                 );
                 
+                /*
                 // Hide Form
                 var form_to_hide = document.forms[0];
                 if (form_to_hide.style.display === "none") {
@@ -195,6 +167,7 @@ function createRequest(){
                 div_element.setAttribute('class', 'form_success');
                 div_element.appendChild(para);
                 document.getElementById("form_container").insertBefore(div_element, form_to_hide);
+                */
             },
             error: function(result){
             },
