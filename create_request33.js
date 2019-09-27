@@ -9,13 +9,13 @@ $(document).ready(
         console.log(urlParams.has('done'));
         if (urlParams.has('prev_entry'))
         {
-            console.log(urlParams.get('id') + " : " + urlParams.get('prev_entry'));
+            console.log(urlParams.get('prev_entry'));
             // POST original form data
             $.ajax(
             {
                 type: 'POST',
                 url: "/machform33/so_php/get_form_values.php",
-                data: "&prev_form_id=" + urlParams.get('id') + "&prev_entry_id=" + urlParams.get('prev_entry'),
+                data: "&prev_form_id=73507&prev_entry_id=" + urlParams.get('prev_entry'),
                 success: function(result){
                 },
                 error: function(result){
