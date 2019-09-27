@@ -6,11 +6,25 @@ $(document).ready(
     function()
     {
         var urlParams = new URLSearchParams(window.location.search);
-        console.log(urlParams.has('done')); // true
-        document.forms[0].addEventListener("submit", createRequest);
-        document.forms[0].addEventListener("submit", function(event) {
-            event.preventDefault();
-        }, false);
+        console.log(urlParams.has('done'));
+        if (urlParams.has('prev_entry_id'))
+        {
+            console.log(urlParams.get('prev_entry_id'));
+            // POST original form data
+            $.ajax(
+            {
+                type: 'POST',
+                url: "/machform33/so_php/get_form_values.php",
+                data: "&prev_form_id=" + urlParams.get('id') + "&prev_entry_id=" + urlParams.get('prev_entry_id'),
+                success: function(result){
+                },
+                error: function(result){
+                },
+                complete: function(result){
+                    console.log(result.responseText);
+                }
+            })
+        }
     }
 );
 
