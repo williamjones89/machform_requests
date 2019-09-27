@@ -34,14 +34,16 @@ $(document).ready(
                     else {
                         form_to_hide.style.display = "none";
                     }
-                    
-                    var student_role = document.getElementById("element_1").options[obj["element_1"]["default_value"]].text();
+                       
+                    document.getElementById("element_1").value = obj["element_1"]["default_value"];
+                    var student_role = $('#element_1 :selected').text();
                     var first_name = obj["element_2"]["default_value"];
                     var last_name = obj["element_3"]["default_value"];
                     var a_number = obj["element_4"]["default_value"];
                     var phone_number = obj["element_9_1"]["default_value"] + "-" + obj["element_9_2"]["default_value"] + "-" + obj["element_9_3"]["default_value"];
                     var alt_email = obj["element_6"]["default_value"];
-                    var last_login = document.getElementById("element_1").options[obj["element_1"]["default_value"]].text();
+                    document.getElementById("element_7").value = obj["element_1"]["default_value"];
+                    var last_login = $('#element_7 :selected').text();
                     var description = obj["element_8"]["default_value"];
                     
                      // Create JSON to send to API URL using variables we created.
