@@ -147,6 +147,7 @@ function createRequest(){
     var requestData = 'input_data=' + encodeURIComponent(jsonString);
     
     console.log("Submitting Request");
+    console.log(requestData);
     
     // POST requestData to service_desk_request
     $.ajax(
