@@ -57,6 +57,8 @@ $(document).ready(
                     var jsonData = result.responseText;
                     var obj = JSON.parse(jsonData);
                     
+                    console.log(obj);
+                    
                     for (i = 0; i < document.forms[0].elements.length; i++) {
                         var element = document.forms[0].elements[i];
                         if (transferJson.hasOwnProperty(element.id)) {
